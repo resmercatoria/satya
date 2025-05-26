@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satya Nadella: Leadership Insights Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #0078D4; /* Microsoft Blue */
+            --secondary-color: #00A4EF; /* Lighter Blue/Teal */
+            --accent-color: #7FBA00; /* Green for accents */
+            --dark-color: #333;
+            --light-color: #f8f9fa;
+            --text-color: #333;
+            --text-light: #f4f4f4;
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Lato', sans-serif;
+            --container-width: 960px;
+            --shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: #fff;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        h1 { font-size: 2.8rem; }
+        h2 { font-size: 2.2rem; color: var(--primary-color); }
+        h3 { font-size: 1.5rem; color: var(--dark-color); }
+
+        p { margin-bottom: 1rem; }
+        ul, ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+        a { color: var(--primary-color); text-decoration: none; }
+        a:hover { color: var(--secondary-color); }
+
+        .container {
+            max-width: var(--container-width);
+            margin: auto;
+            padding: 0 20px;
+            overflow: hidden; /* For AOS child elements */
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+        .section-light {
+            background-color: var(--light-color);
+        }
+
+        /* Header & Navbar */
+        #main-header {
+            background: #fff;
+            color: var(--dark-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+            transition: background-color 0.3s ease;
+        }
+
+        #main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        #navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        #navbar ul li {
+            margin-left: 20px;
+        }
+
+        #navbar ul li a {
+            color: var(--dark-color);
+            padding: 5px 10px;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        #navbar ul li a:hover,
+        #navbar ul li a.active {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        /* Hero Section */
+        #hero {
+            /* background: linear-gradient(rgba(0, 120, 212, 0.8), rgba(0, 120, 212, 0.7)), url('https://via.placeholder.com/1500x800.png?text=Leadership+Background') no-repeat center center/cover; */
+            background: linear-gradient(rgba(0, 120, 212, 0.8), rgba(0, 120, 212, 0.7)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+            color: var(--text-light);
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        #hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+        #hero .subtitle {
+            font-size: 1.8rem;
+            font-family: var(--font-heading);
+            margin-bottom: 1rem;
+        }
+        #hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+        }
+
+        /* Transformation Section (Chart) */
+        .chart-container {
+            position: relative;
+            height: 400px; /* Adjust as needed */
+            width: 100%;
+            max-width: 700px;
+            margin: 2rem auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        /* Profile Section */
+        .profile-content p {
+            font-size: 1.1rem;
+        }
+
+        /* Core Philosophy Pillars */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .pillar {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .pillar:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        .pillar i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .pillar h3 {
+            font-size: 1.2rem;
+            color: var(--dark-color);
+        }
+        #pillar-description-box {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            transition: opacity 0.5s ease, max-height 0.5s ease, padding 0.5s ease;
+        }
+        .pillar-description-box-hidden {
+            opacity: 0;
+            max-height: 0;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+            margin-top: 0 !important;
+            overflow: hidden;
+        }
+
+
+        /* Signature Insights (Accordion) */
+        .insights-accordion .accordion-item {
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden; /* For smooth accordion */
+        }
+        .accordion-header {
+            background-color: #f1f1f1;
+            color: var(--dark-color);
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            font-size: 1.1rem;
+            font-family: var(--font-heading);
+            transition: background-color 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .accordion-header:hover, .accordion-header.active {
+            background-color: #e0e0e0;
+        }
+        .accordion-header i {
+            transition: transform 0.3s ease;
+        }
+        .accordion-header.active i {
+            transform: rotate(180deg);
+        }
+        .accordion-content {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        }
+        .accordion-content p {
+            margin-bottom: 0.8rem;
+        }
+        .accordion-content p:last-child {
+            margin-bottom: 18px; /* Add padding at the bottom */
+        }
+        .accordion-content.active {
+            /* max-height will be set by JS */
+            padding: 18px;
+        }
+
+        /* Breakthrough Moments */
+        .breakthroughs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .breakthrough-card {
+            background: var(--light-color);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        .breakthrough-card i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        .breakthrough-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        .breakthrough-card p {
+            font-size: 0.95rem;
+        }
+        .breakthrough-card p strong {
+            color: var(--primary-color);
+        }
+
+        /* Actionable Frameworks */
+        .framework {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        .framework h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        .framework ul, .framework ol {
+            padding-left: 20px;
+        }
+        .framework li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Decision Tree */
+        #decision-tree .decision-step {
+            margin-bottom: 15px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        #decision-tree .decision-step p strong {
+            font-size: 1.1em;
+        }
+        .decision-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+        .decision-btn:hover {
+            background-color: var(--secondary-color);
+        }
+        .decision-feedback {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f0f8ff; /* AliceBlue */
+            border-left: 3px solid var(--secondary-color);
+            font-style: italic;
+            font-size: 0.9em;
+        }
+        .nadella-wisdom {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e6f3ff;
+            border: 1px solid var(--primary-color);
+            border-radius: 4px;
+            font-size: 0.95em;
+        }
+        #reset-decision-tree {
+            background-color: var(--accent-color);
+        }
+        #reset-decision-tree:hover {
+            background-color: #689f00; /* Darker green */
+        }
+
+        /* Contrarian Takes */
+        .contrarian-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .contrarian-list li {
+            background: var(--light-color);
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .contrarian-list li i {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+
+        /* Implementation Guide (Tabs) */
+        .tabs .tab-buttons {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+        }
+        .tab-button {
+            padding: 10px 20px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            font-family: var(--font-heading);
+            color: var(--dark-color);
+            position: relative;
+            bottom: -2px; /* Align with border */
+        }
+        .tab-button.active {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            font-weight: bold;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background: #fff;
+            border-radius: 0 0 8px 8px; /* Rounded corners if tabs are above */
+            border: 1px solid #ddd;
+            border-top: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .tab-content ul li {
+            margin-bottom: 0.7rem;
+        }
+
+        /* Conclusion */
+        #conclusion {
+            background: var(--primary-color);
+            color: var(--text-light);
+            text-align: center;
+        }
+        #conclusion h2 {
+            color: #fff;
+        }
+        #conclusion p {
+            font-size: 1.1rem;
+        }
+        #conclusion p em {
+            display: block;
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        #main-footer {
+            background: var(--dark-color);
+            color: #aaa;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+        #main-footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Back to Top Button */
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: none; /* Hidden by default */
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            z-index: 999;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+        #back-to-top:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Responsive */
+        @media(max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            #hero h1 { font-size: 2.5rem; }
+            #hero .subtitle { font-size: 1.4rem; }
+            h2 { font-size: 1.8rem; }
+            h3 { font-size: 1.3rem; }
+
+            #main-header .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            #logo { margin-bottom: 0.5rem; }
+            #navbar ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            #navbar ul li {
+                margin: 5px 0;
+            }
+            .pillars-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+            .breakthroughs-grid {
+                grid-template-columns: 1fr;
+            }
+            .tabs .tab-buttons {
+                flex-direction: column;
+            }
+            .tab-button {
+                width: 100%;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+            .tab-button.active {
+                border-bottom: 2px solid var(--primary-color);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <div id="logo">SN // Leadership</div>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#philosophy">Philosophy</a></li>
+                    <li><a href="#insights">Insights</a></li>
+                    <li><a href="#frameworks">Frameworks</a></li>
+                    <li><a href="#guide">Guide</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="section">
+            <div class="container" data-aos="fade-in" data-aos-duration="1000">
+                <h1>Satya Nadella</h1>
+                <p class="subtitle">A Guide to Transformative Leadership Insights</p>
+                <p>Discover the principles that reshaped Microsoft and offer actionable strategies for growth, empathy, and innovation.</p>
+            </div>
+        </section>
+
+        <!-- The Transformation (Market Cap Chart) -->
+        <section id="transformation" class="section">
+            <div class="container">
+                <h2 data-aos="fade-up">The Microsoft Transformation</h2>
+                <p data-aos="fade-up" data-aos-delay="100">Under Satya Nadella's leadership, Microsoft's market cap grew from approximately $300 billion in 2014 to over $3 trillion, showcasing a monumental shift in strategy and culture.</p>
+                <div class="chart-container" data-aos="fade-up" data-aos-delay="200">
+                    <canvas id="marketCapChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leader Profile Overview -->
+        <section id="profile" class="section section-light">
+            <div class="container">
+                <h2 data-aos="fade-up">Leader Profile Overview</h2>
+                <div class="profile-content" data-aos="fade-up" data-aos-delay="100">
+                    <p>Satya Nadella transformed Microsoft from a declining tech giant into one of the world's most valuable companies. What makes Nadella's perspective unique is his combination of deep technical expertise, cultural transformation leadership, and a growth mindset philosophy that permeates every aspect of his approach.</p>
+                    <p>Born in India and educated as an engineer, Nadella brings a global perspective and immigrant's drive. His background in cloud computing positioned him perfectly for Microsoft's pivot to cloud services. However, his greatest achievement may be cultural: transforming Microsoft from a "know-it-all" culture to a "learn-it-all" culture.</p>
+                    <p>Nadella's leadership philosophy centers on empathy, continuous learning, and empowering others to achieve more.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Philosophy Pillars -->
+        <section id="philosophy" class="section">
+            <div class="container">
+                <h2 data-aos="fade-up">Core Philosophy Pillars</h2>
+                <div class="pillars-grid" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pillar" data-description="Abilities and intelligence can be developed through dedication and hard work.">
+                        <i class="fas fa-brain"></i>
+                        <h3>Growth Mindset</h3>
+                    </div>
+                    <div class="pillar" data-description="Understanding and sharing feelings as the foundation for innovation and collaboration.">
+                        <i class="fas fa-heart"></i>
+                        <h3>Empathy</h3>
+                    </div>
+                    <div class="pillar" data-description="Organizational culture is the ultimate determinant of success.">
+                        <i class="fas fa-users"></i>
+                        <h3>Culture First</h3>
+                    </div>
+                    <div class="pillar" data-description="Building ecosystems that enable others to create value.">
+                        <i class="fas fa-project-diagram"></i>
+                        <h3>Platforms Over Products</h3>
+                    </div>
+                    <div class="pillar" data-description="Focusing on win-win relationships and collaboration, even with competitors.">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Partnership Over Competition</h3>
+                    </div>
+                </div>
+                <div id="pillar-description-box" class="pillar-description-box-hidden" data-aos="fade-up"></div>
+            </div>
+        </section>
+
+        <!-- Signature Insights -->
+        <section id="insights" class="section section-light">
+            <div class="container">
+                <h2 data-aos="fade-up">Signature Insights</h2>
+                <div class="insights-accordion" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Insights will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Breakthrough Moments -->
+        <section id="breakthroughs" class="section">
+            <div class="container">
+                <h2 data-aos="fade-up">Breakthrough Moments</h2>
+                <div class="breakthroughs-grid" data-aos="fade-up" data-aos-delay="100">
+                    <div class="breakthrough-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile-First, Cloud-First Pivot (2014)</h3>
+                        <p>Embraced mobile and cloud, even if it meant cannibalizing existing businesses. This required convincing the board and employees to abandon Microsoft's traditional platform strategy.</p>
+                        <p><strong>Lesson:</strong> Sometimes you must destroy what made you successful to build future success.</p>
+                    </div>
+                    <div class="breakthrough-card">
+                        <i class="fab fa-apple"></i> <i class="fab fa-android"></i>
+                        <h3>Office on iOS and Android (2014)</h3>
+                        <p>Made Microsoft Office available on competing mobile platforms, expanding Office's market reach dramatically despite internal resistance.</p>
+                        <p><strong>Lesson:</strong> Strategic partnerships, even with competitors, can expand your total market.</p>
+                    </div>
+                    <div class="breakthrough-card">
+                        <i class="fab fa-linkedin"></i>
+                        <h3>LinkedIn Acquisition (2016)</h3>
+                        <p>Acquired LinkedIn for $26 billion, seeing it as crucial for connecting productivity tools with professional networking and learning.</p>
+                        <p><strong>Lesson:</strong> Vision-driven acquisitions aligned with long-term strategy can be worth short-term risks.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Actionable Frameworks -->
+        <section id="frameworks" class="section section-light">
+            <div class="container">
+                <h2 data-aos="fade-up">Actionable Frameworks</h2>
+                
+                <div class="framework" data-aos="fade-up" data-aos-delay="100">
+                    <h3>The Growth Mindset Decision Filter</h3>
+                    <div id="decision-tree">
+                        <p>Before major decisions, ask:</p>
+                        <div class="decision-step" id="step1">
+                            <p><strong>1. Does this help us learn and grow?</strong></p>
+                            <button class="decision-btn" data-next="step2" data-answer="learn_yes">Yes</button>
+                            <button class="decision-btn" data-next="step2" data-answer="learn_no">No</button>
+                            <div class="decision-feedback"></div>
+                        </div>
+                        <div class="decision-step" id="step2" style="display:none;">
+                             <p><strong>2. Does this empower others to achieve more?</strong></p>
+                            <button class="decision-btn" data-next="step3" data-answer="empower_yes">Yes</button>
+                            <button class="decision-btn" data-next="step3" data-answer="empower_no">No</button>
+                            <div class="decision-feedback"></div>
+                        </div>
+                        <div class="decision-step" id="step3" style="display:none;">
+                            <p><strong>3. Are we being driven by curiosity or ego?</strong></p>
+                            <button class="decision-btn" data-next="step4" data-answer="curiosity">Curiosity</button>
+                            <button class="decision-btn" data-next="step4" data-answer="ego">Ego</button>
+                            <div class="decision-feedback"></div>
+                        </div>
+                         <div class="decision-step" id="step4" style="display:none;">
+                            <p><strong>4. What can we learn if this fails?</strong> (Reflect on this)</p>
+                            <p class="nadella-wisdom">Nadella emphasizes that even failures are learning opportunities if approached with a growth mindset. The key is to extract lessons and adapt.</p>
+                            <button class="decision-btn" id="reset-decision-tree">Start Over</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="framework" data-aos="fade-up" data-aos-delay="200">
+                    <h3>The Platform Thinking Model</h3>
+                    <p>When evaluating opportunities, consider:</p>
+                    <ul>
+                        <li>How does this create value for others?</li>
+                        <li>What network effects could this generate?</li>
+                        <li>How does this fit into a broader ecosystem?</li>
+                        <li>What developer/partner opportunities does this create?</li>
+                    </ul>
+                </div>
+
+                <div class="framework" data-aos="fade-up" data-aos-delay="300">
+                    <h3>The Cultural Transformation Process</h3>
+                    <ol>
+                        <li><strong>Articulate the "why"</strong> - Connect change to purpose and mission.</li>
+                        <li><strong>Model the behavior</strong> - Leaders must embody the desired culture.</li>
+                        <li><strong>Measure what matters</strong> - Create metrics that reinforce cultural values.</li>
+                        <li><strong>Celebrate progress</strong> - Recognize people who demonstrate new behaviors.</li>
+                        <li><strong>Be patient but persistent</strong> - Culture change takes time but requires consistency.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contrarian Takes -->
+        <section id="contrarian" class="section">
+            <div class="container">
+                <h2 data-aos="fade-up">Contrarian Takes</h2>
+                <ul class="contrarian-list" data-aos="fade-up" data-aos-delay="100">
+                    <li><i class="fas fa-lightbulb"></i> <strong>Partnership Over Winning:</strong> Emphasizes collaboration even with rivals.</li>
+                    <li><i class="fas fa-compress-arrows-alt"></i> <strong>Embrace Your Constraints:</strong> Uses limitations as innovation drivers.</li>
+                    <li><i class="fas fa-users-cog"></i> <strong>Culture First, Strategy Second:</strong> Argues culture is prerequisite for successful strategy.</li>
+                    <li><i class="fas fa-redo-alt"></i> <strong>Fail Fast, Learn Faster:</strong> Advocates for systems that maximize learning from failures.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Implementation Guide -->
+        <section id="guide" class="section section-light">
+            <div class="container">
+                <h2 data-aos="fade-up">Implementation Guide</h2>
+                <div class="tabs" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="individuals">For Individuals</button>
+                        <button class="tab-button" data-tab="organizations">For Organizations</button>
+                        <button class="tab-button" data-tab="teams">For Teams</button>
+                    </div>
+                    <div id="individuals" class="tab-content active">
+                        <ul>
+                            <li><strong>Develop Learning Habits:</strong> Read daily, seek feedback, admit mistakes.</li>
+                            <li><strong>Practice Empathy:</strong> Spend time with customers and frontline employees.</li>
+                            <li><strong>Question Success:</strong> Regularly ask "What made us successful?" and "What could make us unsuccessful?"</li>
+                            <li><strong>Build Platforms:</strong> Look for ways to enable others' success.</li>
+                        </ul>
+                    </div>
+                    <div id="organizations" class="tab-content">
+                        <ul>
+                            <li><strong>Measure Learning:</strong> Track experiments, failures, and pivots as success metrics.</li>
+                            <li><strong>Hire for Growth Mindset:</strong> Prioritize curiosity and adaptability in recruiting.</li>
+                            <li><strong>Create Psychological Safety:</strong> Make it safe to fail, ask questions, and challenge ideas.</li>
+                            <li><strong>Align Culture and Strategy:</strong> Ensure organizational values support strategic goals.</li>
+                        </ul>
+                    </div>
+                    <div id="teams" class="tab-content">
+                        <ul>
+                            <li><strong>Start Meetings with Learning:</strong> Share recent learnings or failures.</li>
+                            <li><strong>Practice "Yes, and...":</strong> Build on others' ideas before critiquing.</li>
+                            <li><strong>Rotate Perspectives:</strong> Consider problems from customer, competitor, and partner viewpoints.</li>
+                            <li><strong>Celebrate Intelligent Failures:</strong> Recognize well-designed experiments that didn't work.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section id="conclusion" class="section">
+            <div class="container" data-aos="fade-in">
+                <h2>Nadella's Legacy</h2>
+                <p>Satya Nadella's leadership philosophy proves that technical expertise combined with human empathy and a growth mindset can drive extraordinary transformation. His approach demonstrates that the most successful leaders in the digital age will be those who empower others to achieve more while continuously learning and adapting themselves.</p>
+                <p><em>Hit refresh. Find your purpose. Empower everyone.</em></p>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <div class="container">
+            <p>© 2024 Leadership Insights Guide. Inspired by Satya Nadella.</p>
+            <p>Created for demonstration purposes.</p>
+        </div>
+    </footer>
+
+    <button id="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // AOS Initialization
+            AOS.init({
+                duration: 800, // values from 0 to 3000, with step 50ms
+                once: true, // whether animation should happen only once - while scrolling down
+            });
+
+            // Sticky Header & Active Nav Link
+            const header = document.getElementById('main-header');
+            const navbar = document.getElementById('navbar');
+            const navLinks = navbar.querySelectorAll('a');
+            const sections = document.querySelectorAll('main section');
+            const headerHeight = header.offsetHeight;
+
+            window.addEventListener('scroll', () => {
+                // Sticky header
+                if (window.scrollY > headerHeight) {
+                    header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)'; // Slight transparency
+                } else {
+                    header.style.backgroundColor = '#fff';
+                }
+
+                // Active nav link
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - headerHeight - 50) { // Adjust offset as needed
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+            
+            // Smooth scrolling for nav links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - header.offsetHeight, // Adjust for sticky header
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+
+            // Market Cap Chart (Chart.js)
+            const ctx = document.getElementById('marketCapChart');
+            if (ctx) {
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['2014', '2016', '2018', '2020', '2022', '2024 (Est)'],
+                        datasets: [{
+                            label: 'Microsoft Market Cap (USD Trillions)',
+                            data: [0.3, 0.45, 0.8, 1.6, 2.2, 3.1], // Approximate values
+                            borderColor: 'var(--primary-color)',
+                            backgroundColor: 'rgba(0, 120, 212, 0.1)',
+                            tension: 0.3,
+                            fill: true,
+                            pointRadius: 5,
+                            pointBackgroundColor: 'var(--primary-color)',
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Market Cap (Trillions USD)'
+                                }
+                            },
+                            x: {
+                                 title: {
+                                    display: true,
+                                    text: 'Year'
+                                }
+                            }
+                        },
+                        animation: {
+                            duration: 1500,
+                            easing: 'easeInOutQuart'
+                        },
+                        plugins: {
+                            legend: {
+                                display: true,
+                                position: 'top',
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return ` ${context.dataset.label}: $${context.parsed.y}T`;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Core Philosophy Pillars Interaction
+            const pillars = document.querySelectorAll('.pillar');
+            const pillarDescriptionBox = document.getElementById('pillar-description-box');
+            
+            pillars.forEach(pillar => {
+                pillar.addEventListener('mouseenter', () => {
+                    const description = pillar.dataset.description;
+                    if (description && pillarDescriptionBox) {
+                        pillarDescriptionBox.textContent = description;
+                        pillarDescriptionBox.classList.remove('pillar-description-box-hidden');
+                    }
+                });
+            });
+            const pillarsGrid = document.querySelector('.pillars-grid');
+            if (pillarsGrid && pillarDescriptionBox) {
+                pillarsGrid.addEventListener('mouseleave', () => {
+                    pillarDescriptionBox.classList.add('pillar-description-box-hidden');
+                    pillarDescriptionBox.textContent = '';
+                });
+            }
+
+
+            // Signature Insights Accordion
+            const insightData = [ 
+                { 
+                    title: `"We are moving from a world where computing power was scarce to a place where it becomes almost limitless, and where the true scarce commodity is increasingly human attention and time."`,
+                    content: {
+                        Source: "Hit Refresh book and multiple interviews (2017-2018)",
+                        Context: "Discussing the shift from the PC era to the cloud and AI era",
+                        Principle: "Success comes from optimizing for human needs, not technical capabilities",
+                        Application: "Design products and strategies that respect users' time and attention rather than competing for it",
+                        WhyItWorks: "In an attention economy, the companies that help people accomplish more with less effort win customer loyalty and market share"
+                    }
+                },
+                {
+                    title: `"The learn-it-all does better than the know-it-all."`,
+                    content: {
+                        Source: "Multiple speeches and interviews, core theme since 2014",
+                        Context: "Describing Microsoft's cultural transformation",
+                        Principle: "Intellectual humility and continuous learning trump expertise and ego",
+                        Application: "Hire for curiosity over credentials, reward learning from failures, ask questions before giving answers",
+                        WhyItWorks: "In rapidly changing markets, the ability to adapt and learn new skills becomes more valuable than existing knowledge"
+                    }
+                },
+                {
+                    title: `"Empathy is not a soft skill—it's actually the hardest skill we learn."`,
+                    content: {
+                        Source: "Various interviews and \"Hit Refresh\" book",
+                        Context: "Discussing leadership development and his personal journey as a father of a special needs child",
+                        Principle: "Understanding others' perspectives is crucial for innovation and leadership success",
+                        Application: "Spend time with customers, listen more than you speak, design products for diverse needs and abilities",
+                        WhyItWorks: "Empathy drives better product design, stronger teams, and more inclusive solutions that capture broader markets"
+                    }
+                },
+                {
+                    title: `"Our industry does not respect tradition—it only respects innovation."`,
+                    content: {
+                        Source: "All-hands meetings and public speeches",
+                        Context: "Explaining why Microsoft needed to abandon legacy approaches",
+                        Principle: "Past success can become a liability if it prevents future adaptation",
+                        Application: "Regularly question existing processes, be willing to cannibalize successful products, embrace creative destruction",
+                        WhyItWorks: "Companies that cling to successful formulas get disrupted by those willing to reinvent themselves"
+                    }
+                },
+                 {
+                    title: `"Don't be a know-it-all; be a learn-it-all. When you approach things with a learn-it-all mentality, you're much more open to the ideas of others."`,
+                    content: {
+                        Source: "LinkedIn posts and conference speeches",
+                        Context: "Advice to leaders and teams about growth mindset",
+                        Principle: "Intellectual humility opens doors to collaboration and innovation",
+                        Application: "Ask \"What can I learn?\" instead of \"What do I know?\", seek diverse perspectives, admit when you're wrong",
+                        WhyItWorks: "Learn-it-all leaders create psychological safety that enables teams to take risks and innovate"
+                    }
+                },
+                {
+                    title: `"We are not going to out-muscle anybody. We're going to have to out-think them."`,
+                    content: {
+                        Source: "Internal meetings and strategy discussions",
+                        Context: "Competing against larger tech companies like Amazon and Google",
+                        Principle: "Strategic thinking and execution matter more than resources",
+                        Application: "Focus on unique advantages, find white space others miss, leverage partnerships to multiply capabilities",
+                        WhyItWorks: "Smart resource allocation and strategic positioning can overcome raw resource disadvantages"
+                    }
+                },
+                {
+                    title: `"Every person, organization, and even society reaches a point at which they owe it to themselves to hit refresh."`,
+                    content: {
+                        Source: "Book title and central thesis of \"Hit Refresh\"",
+                        Context: "Personal and corporate transformation",
+                        Principle: "Periodic reinvention is necessary for continued growth and relevance",
+                        Application: "Schedule regular strategy reviews, be willing to pivot when needed, embrace change as opportunity",
+                        WhyItWorks: "Organizations that refresh themselves stay ahead of disruption and maintain competitive advantage"
+                    }
+                },
+                {
+                    title: `"The true digital transformation is about how you enable others to be more successful."`,
+                    content: {
+                        Source: "Customer conferences and analyst meetings",
+                        Context: "Microsoft's shift to platform strategy",
+                        Principle: "Success comes from creating value for others, not just capturing value",
+                        Application: "Build platforms that make customers successful, measure success by customer outcomes, think ecosystem not just product",
+                        WhyItWorks: "Platforms create network effects and switching costs while generating sustainable competitive advantages"
+                    }
+                },
+                {
+                    title: `"I fundamentally believe that if you are not able to learn and adapt, you will be disrupted."`,
+                    content: {
+                        Source: "Various interviews about industry disruption",
+                        Context: "Discussing rapid technological change",
+                        Principle: "Adaptability is the key survival skill in dynamic markets",
+                        Application: "Build learning into organizational DNA, experiment constantly, fail fast and learn faster",
+                        WhyItWorks: "Markets punish rigidity and reward adaptability, especially in technology sectors"
+                    }
+                },
+                {
+                    title: `"What I've learned is that courage is not the absence of fear, but the willingness to act in spite of it."`,
+                    content: {
+                        Source: "Leadership discussions and personal reflections",
+                        Context: "Making difficult decisions as CEO",
+                        Principle: "Leadership requires action despite uncertainty and risk",
+                        Application: "Make decisions with incomplete information, take calculated risks, move forward despite fear of failure",
+                        WhyItWorks: "Markets reward speed and decisiveness; paralysis by analysis leads to missed opportunities"
+                    }
+                },
+                {
+                    title: `"Success can breed complacency, and complacency is the number one enemy of transformation."`,
+                    content: {
+                        Source: "Internal communications and strategy sessions",
+                        Context: "Maintaining momentum during Microsoft's turnaround",
+                        Principle: "Past success can become the biggest obstacle to future success",
+                        Application: "Celebrate wins briefly then focus on next challenges, question successful formulas, stay paranoid about competition",
+                        WhyItWorks: "Organizations that avoid complacency continue evolving while competitors rest on their laurels"
+                    }
+                },
+                {
+                    title: `"I want us to be known for having a culture where everybody can do their best work."`,
+                    content: {
+                        Source: "Employee communications and culture initiatives",
+                        Context: "Building inclusive workplace culture",
+                        Principle: "Organizational culture should maximize human potential",
+                        Application: "Remove barriers to performance, create psychological safety, invest in employee development",
+                        WhyItWorks: "Cultures that unlock human potential attract top talent and drive superior business results"
+                    }
+                }
+            ];
+
+            const insightsAccordionContainer = document.querySelector('.insights-accordion');
+            if (insightsAccordionContainer) {
+                insightsAccordionContainer.innerHTML = ''; // Clear any static content
+                
+                insightData.forEach(insight => {
+                    const item = document.createElement('div');
+                    item.classList.add('accordion-item');
+
+                    const header = document.createElement('button');
+                    header.classList.add('accordion-header');
+                    header.innerHTML = `${insight.title} <i class="fas fa-chevron-down"></i>`;
+                    
+                    const contentDiv = document.createElement('div');
+                    contentDiv.classList.add('accordion-content');
+                    
+                    let contentHTML = '';
+                    for (const key in insight.content) {
+                        contentHTML += `<p><strong>${key}:</strong> ${insight.content[key]}</p>`;
+                    }
+                    contentDiv.innerHTML = contentHTML;
+
+                    item.appendChild(header);
+                    item.appendChild(contentDiv);
+                    insightsAccordionContainer.appendChild(item);
+                });
+            }
+            
+            // Accordion functionality for ALL items
+            const accordionItems = document.querySelectorAll('.insights-accordion .accordion-header');
+            accordionItems.forEach(header => {
+                header.addEventListener('click', () => {
+                    const currentlyActiveHeader = document.querySelector('.insights-accordion .accordion-header.active');
+                    if (currentlyActiveHeader && currentlyActiveHeader !== header) {
+                        currentlyActiveHeader.classList.remove('active');
+                        currentlyActiveHeader.nextElementSibling.style.maxHeight = null;
+                        currentlyActiveHeader.nextElementSibling.classList.remove('active');
+                    }
+
+                    header.classList.toggle('active');
+                    const content = header.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        content.classList.remove('active');
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        content.classList.add('active');
+                    }
+                });
+            });
+
+
+            // Actionable Frameworks - Decision Tree
+            const decisionBtns = document.querySelectorAll('.decision-btn');
+            const decisionSteps = document.querySelectorAll('.decision-step');
+            const resetDecisionTreeBtn = document.getElementById('reset-decision-tree');
+
+            const feedbackMessages = {
+                learn_yes: "Great! Nadella believes continuous learning is key.",
+                learn_no: "Consider if there's a learning angle. Growth mindset values this.",
+                empower_yes: "Excellent. Empowering others is a core Nadella principle.",
+                empower_no: "Think about how this could enable others. This often leads to greater impact.",
+                curiosity: "Good. Curiosity fuels innovation and openness to new ideas.",
+                ego: "Be cautious. Ego can hinder learning and collaboration. Reflect on true motivations."
+            };
+
+            decisionBtns.forEach(btn => {
+                if (btn.id === 'reset-decision-tree') return; // Skip reset button here
+
+                btn.addEventListener('click', () => {
+                    const currentStep = btn.closest('.decision-step');
+                    const nextStepId = btn.dataset.next;
+                    const answer = btn.dataset.answer;
+                    const feedbackDiv = currentStep.querySelector('.decision-feedback');
+
+                    if (feedbackDiv && feedbackMessages[answer]) {
+                        feedbackDiv.textContent = feedbackMessages[answer];
+                        feedbackDiv.style.display = 'block';
+                    } else if (feedbackDiv) {
+                        feedbackDiv.style.display = 'none';
+                    }
+                    
+                    currentStep.querySelectorAll('.decision-btn:not(#reset-decision-tree)').forEach(b => {
+                        b.style.display = 'none'; // Hide buttons in current step
+                    });
+                     // Keep the clicked button visible or change its style if desired
+                    btn.style.display = 'inline-block'; // Or some other indication
+                    // btn.disabled = true; // Optionally disable after click
+
+
+                    setTimeout(() => {
+                        if (nextStepId) {
+                            const nextStepElement = document.getElementById(nextStepId);
+                            if (nextStepElement) {
+                                nextStepElement.style.display = 'block';
+                                nextStepElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            }
+                        }
+                    }, 500); 
+                });
+            });
+
+            if (resetDecisionTreeBtn) {
+                resetDecisionTreeBtn.addEventListener('click', () => {
+                    decisionSteps.forEach((step, index) => {
+                        step.style.display = (index === 0) ? 'block' : 'none';
+                        step.querySelectorAll('.decision-btn:not(#reset-decision-tree)').forEach(b => {
+                             b.style.display = 'inline-block';
+                             b.disabled = false; // Re-enable if disabled
+                        });
+                        const feedbackDiv = step.querySelector('.decision-feedback');
+                        if (feedbackDiv) feedbackDiv.style.display = 'none';
+                    });
+                    document.getElementById('step1').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                });
+            }
+
+
+            // Implementation Guide Tabs
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    const targetTab = button.dataset.tab;
+                    tabContents.forEach(content => {
+                        if (content.id === targetTab) {
+                            content.classList.add('active');
+                        } else {
+                            content.classList.remove('active');
+                        }
+                    });
+                });
+            });
+
+            // Back to Top Button
+            const backToTopButton = document.getElementById('back-to-top');
+            if (backToTopButton) {
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > 300) { // Show after 300px scroll
+                        backToTopButton.style.display = 'flex';
+                    } else {
+                        backToTopButton.style.display = 'none';
+                    }
+                });
+
+                backToTopButton.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
